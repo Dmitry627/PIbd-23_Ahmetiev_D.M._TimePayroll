@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities.Enums;
 
+// Виды проектов компании
 public enum ProjectType
 {
     None = 0,

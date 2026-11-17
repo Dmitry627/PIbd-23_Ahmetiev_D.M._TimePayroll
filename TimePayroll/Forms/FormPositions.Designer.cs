@@ -1,16 +1,11 @@
 ﻿namespace TimePayroll.Forms
 {
+    // Разметка и элементы формы списка должностей
     partial class FormPositions
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        // Освобождает ресурсы элементов формы при ее закрытии
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +17,7 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        // Создает элементы формы, задает свойства и подключает события
         private void InitializeComponent()
         {
             DataGridViewPositions = new DataGridView();
@@ -34,9 +26,9 @@
             buttonDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridViewPositions).BeginInit();
             SuspendLayout();
-            // 
+            //
             // DataGridViewPositions
-            // 
+            //
             DataGridViewPositions.AllowUserToAddRows = false;
             DataGridViewPositions.AllowUserToDeleteRows = false;
             DataGridViewPositions.AllowUserToResizeColumns = false;
@@ -51,9 +43,9 @@
             DataGridViewPositions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridViewPositions.Size = new Size(723, 360);
             DataGridViewPositions.TabIndex = 0;
-            // 
+            //
             // buttonAdd
-            // 
+            //
             buttonAdd.Location = new Point(729, 12);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(119, 72);
@@ -61,9 +53,9 @@
             buttonAdd.Text = "Добавить";
             buttonAdd.UseVisualStyleBackColor = true;
             buttonAdd.Click += buttonAdd_Click;
-            // 
+            //
             // buttonEdit
-            // 
+            //
             buttonEdit.Location = new Point(729, 90);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(119, 72);
@@ -71,9 +63,9 @@
             buttonEdit.Text = "Изменить";
             buttonEdit.UseVisualStyleBackColor = true;
             buttonEdit.Click += buttonEdit_Click;
-            // 
+            //
             // buttonDelete
-            // 
+            //
             buttonDelete.Location = new Point(729, 168);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(119, 72);
@@ -81,9 +73,9 @@
             buttonDelete.Text = "Удалить";
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
-            // 
+            //
             // FormPositions
-            // 
+            //
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 360);

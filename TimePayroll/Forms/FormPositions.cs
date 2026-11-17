@@ -10,12 +10,14 @@ using Unity;
 
 namespace TimePayroll.Forms
 {
+    // Форма списка должностей с добавлением, изменением и удалением
     public partial class FormPositions : Form
     {
         private readonly IUnityContainer _container;
 
         private readonly IPositionRepository _positionRepository;
 
+        // Создает форму и принимает контейнер Unity и репозиторий должностей
         public FormPositions(IUnityContainer container, IPositionRepository positionRepository)
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace TimePayroll.Forms
             _positionRepository = positionRepository ?? throw new ArgumentNullException(nameof(positionRepository));
         }
 
+        // Загружает список должностей при открытии формы и показывает ошибки
         private void FormPositions_Load(object sender, EventArgs e)
         {
             try
@@ -40,6 +43,7 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Открывает форму добавления и обновляет список после ее закрытия
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try {
@@ -56,6 +60,7 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Передает номер выбранной записи в форму редактирования и обновляет список
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             if (!TryGetIdentifierFromSelectedRow(out var findId)) return;
@@ -75,6 +80,7 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Запрашивает подтверждение, вызывает удаление выбранной записи и обновляет список
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (!TryGetIdentifierFromSelectedRow(out var findId)) return;
@@ -99,8 +105,10 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Получает список должностей из репозитория и выводит его в таблицу
         private void LoadList() => DataGridViewPositions.DataSource = _positionRepository.ReadPositions().ToList();
     
+        // Проверяет выбор строки и возвращает ее идентификатор через out
         private bool TryGetIdentifierFromSelectedRow(out int id)
         {
             id = 0;

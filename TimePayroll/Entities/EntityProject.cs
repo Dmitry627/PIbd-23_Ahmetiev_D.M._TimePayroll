@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель проекта
 public class Project
 {
     public long Id { get; private set; }
@@ -12,6 +13,7 @@ public class Project
 
     public long DeveloperId { get; private set; }
 
+    // Создает объект проекта из переданных значений
     public static Project CreateEntity(long id, string? name, int type, long managerId, long developerId)
     {
         return new Project

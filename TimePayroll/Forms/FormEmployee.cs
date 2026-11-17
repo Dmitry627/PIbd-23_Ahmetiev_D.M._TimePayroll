@@ -10,6 +10,7 @@ using TimePayroll.Entities;
 
 namespace TimePayroll.Forms
 {
+    // Форма добавления и редактирования одного работника
     public partial class FormEmployee : Form
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -18,6 +19,7 @@ namespace TimePayroll.Forms
 
         private long? _employeeId;
 
+        // При присваивании номера загружает запись в поля формы и запоминает ее для редактирования
         public long Id
         {
             set
@@ -43,6 +45,7 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Создает форму, принимает репозитории и заполняет список должностей
         public FormEmployee(IEmployeeRepository employeeRepository, IPositionRepository positionRepository)
         {
             InitializeComponent();
@@ -54,6 +57,7 @@ namespace TimePayroll.Forms
             comboBoxPosition.SelectedIndex = -1;
         }
 
+        // Проверяет поля и передает данные работника в репозиторий для создания или изменения
         private void buttonSave_Click(object sender, EventArgs e)
         {
             try {
@@ -77,8 +81,10 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Закрывает форму без передачи изменений в репозиторий
         private void buttonCancel_Click(object sender, EventArgs e) => Close();
 
+        // Собирает объект работника из полей формы и выбранной должности
         private Employee CreateEmployee(long id) =>
             Employee.CreateEntity(
                 id,

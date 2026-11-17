@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель записи рабочего времени
 public class WorkEntry
 {
     public long Id { get; private set; }
@@ -14,6 +15,7 @@ public class WorkEntry
 
     public decimal Hours { get; private set; }
 
+    // Создает объект записи рабочего времени из переданных значений
     public static WorkEntry CreateEntity(
         long id,
         long employeeId,

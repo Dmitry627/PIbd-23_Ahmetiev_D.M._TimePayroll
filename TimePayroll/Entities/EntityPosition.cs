@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель должности
 public class Position
 {
     public int Id { get; private set; }
@@ -8,6 +9,7 @@ public class Position
 
     public decimal HourlyRate { get; private set; }
 
+    // Создает объект должности из переданных значений
     public static Position CreateEntity(int id, string? name, decimal hourlyRate)
     {
         return new Position

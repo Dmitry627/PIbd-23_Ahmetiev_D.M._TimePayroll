@@ -4,20 +4,18 @@ using TimePayroll.Repositories.Implementations;
 
 namespace TimePayroll;
 
+// Запускает приложение и настраивает контейнер Unity
 internal static class Program
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
+    // Настраивает Windows Forms и запускает главную форму через Unity
     [STAThread]
     static void Main()
     {
-        // To customize application configuration such as set high DPI settings or default font,
-        // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         Application.Run(CreateContainer().Resolve<MainForm>());
     }
 
+    // Создает контейнер Unity и связывает интерфейсы репозиториев с реализациями
     private static IUnityContainer CreateContainer()
     {
         var container = new UnityContainer();

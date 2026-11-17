@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель работника
 public class Employee
 {
     public long Id { get; private set; }
@@ -10,6 +11,7 @@ public class Employee
 
     public int PositionId { get; private set; }
 
+    // Создает объект работника из переданных значений
     public static Employee CreateEntity(long id, string? firstName, string? secondName, int positionId)
     {
         return new Employee

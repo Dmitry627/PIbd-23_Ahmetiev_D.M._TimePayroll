@@ -10,8 +10,10 @@ using Unity;
 
 namespace TimePayroll.Forms
 {
+    // Форма списка работников
     public partial class FormEmployees : Form
     {
+        // Создает форму списка работников и ее элементы
         public FormEmployees()
         {
             InitializeComponent();

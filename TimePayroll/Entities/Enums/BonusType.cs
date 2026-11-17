@@ -1,6 +1,7 @@
 namespace TimePayroll.Entities.Enums;
 
 [Flags]
+// Виды надбавок, которые можно сочетать с помощью флагов
 public enum BonusType
 {
     None = 0,

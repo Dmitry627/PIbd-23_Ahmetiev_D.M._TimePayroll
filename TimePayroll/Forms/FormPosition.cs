@@ -10,12 +10,14 @@ using TimePayroll.Entities;
 
 namespace TimePayroll.Forms
 {
+    // Форма добавления и редактирования одной должности
     public partial class FormPosition : Form
     {
         private readonly IPositionRepository _positionRepository;
 
         private int? _positionId;
 
+        // При присваивании номера загружает запись в поля формы и запоминает ее для редактирования
         public int Id
         {
             set {
@@ -37,12 +39,14 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Создает форму и принимает репозиторий должностей
         public FormPosition(IPositionRepository positionRepository)
         {
             InitializeComponent();
             _positionRepository = positionRepository ?? throw new ArgumentNullException(nameof(positionRepository));
         }
 
+        // Проверяет поля и передает данные должности в репозиторий для создания или изменения
         private void buttonSave_Click(object sender, EventArgs e)
         {
             string name = TextBoxPositionName.Text.Trim();
@@ -76,8 +80,10 @@ namespace TimePayroll.Forms
             }
         }
 
+        // Закрывает форму без передачи изменений в репозиторий
         private void buttonCancel_Click(object sender, EventArgs e) => Close();
 
+        // Собирает объект должности из значений полей формы
         private Position CreatePosition(int id) =>
             Position.CreateEntity(
                 id,

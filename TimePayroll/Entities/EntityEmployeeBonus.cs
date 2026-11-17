@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель надбавки работника
 public class EmployeeBonus
 {
     public long Id { get; private set; }
@@ -12,6 +13,7 @@ public class EmployeeBonus
 
     public DateTime EndDate { get; private set; }
 
+    // Создает объект надбавки работника из переданных значений
     public static EmployeeBonus CreateEntity(
         long id,
         long employeeId,

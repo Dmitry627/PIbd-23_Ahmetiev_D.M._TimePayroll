@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities;
 
+// Модель начисления зарплаты
 public class Payroll
 {
     public long Id { get; private set; }
@@ -16,6 +17,7 @@ public class Payroll
 
     public decimal TotalSalary { get; private set; }
 
+    // Создает объект начисления зарплаты из переданных значений
     public static Payroll CreateEntity(
         long id,
         long employeeId,

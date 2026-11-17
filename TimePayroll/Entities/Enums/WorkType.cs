@@ -1,5 +1,6 @@
 namespace TimePayroll.Entities.Enums;
 
+// Виды выполняемых работ
 public enum WorkType
 {
     None = 0,

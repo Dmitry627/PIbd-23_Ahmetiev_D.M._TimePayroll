@@ -7,7 +7,7 @@ public class PositionRepository : IPositionRepository
 {
     public IEnumerable<Position> ReadPositions()
     {
-        throw new NotImplementedException();
+        return [];
     }
 
     public Position ReadPositionById(int id)

@@ -26,10 +26,8 @@ namespace TimePayroll.Forms
 
         public long Id
         {
-            set
-            {
-                try
-                {
+            set {
+                try {
                     var project = _projectRepository.ReadProjectById(value);
                     if (project is null) throw new InvalidDataException("Проект не найден");
                     textBoxProjectName.Text = project.Name;
@@ -37,8 +35,7 @@ namespace TimePayroll.Forms
                     comboBoxManager.SelectedValue = project.ManagerId;
                     comboBoxDeveloper.SelectedValue = project.DeveloperId;
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     MessageBox.Show(
                         ex.Message,
                         "Ошибка при получении проекта",

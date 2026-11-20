@@ -30,12 +30,10 @@ namespace TimePayroll.Forms
         // Загружает список должностей при открытии формы и показывает ошибки
         private void FormPositions_Load(object sender, EventArgs e)
         {
-            try
-            {
+            try {
                 LoadList();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(
                     ex.Message,
                     "Ошибка при загрузке",
@@ -66,6 +64,7 @@ namespace TimePayroll.Forms
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             if (!TryGetIdentifierFromSelectedRow(out var findId)) return;
+            
             try {
                 var form = _container.Resolve<FormPosition>();
                 form.Id = findId;
@@ -91,6 +90,7 @@ namespace TimePayroll.Forms
                 "Удаление",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) != DialogResult.Yes) return;
+
             try {
                 var position = _positionRepository.ReadPositionById(findId);
                 if (position is null) throw new InvalidDataException("Должность не найдена");

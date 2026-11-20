@@ -6,10 +6,10 @@ namespace TimePayroll.Repositories.Implementations;
 // Заглушка репозитория проектов
 public class ProjectRepository : IProjectRepository
 {
-    // Заглушка получения списка проектов, пока выбрасывает исключение
+    // Возвращает пустой список проектов для заглушки
     public IEnumerable<Project> ReadProjects()
     {
-        throw new NotImplementedException();
+        return [];
     }
     
     // Заглушка получения проекта по идентификатору, пока выбрасывает исключение

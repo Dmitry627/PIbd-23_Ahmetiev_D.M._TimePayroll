@@ -6,21 +6,19 @@ namespace TimePayroll.Repositories.Implementations;
 // Заглушка репозитория надбавок работников
 public class EmployeeBonusRepository : IEmployeeBonusRepository
 {
-    // Заглушка получения списка надбавок работников, пока выбрасывает исключение
+    // Возвращает пустой список надбавок работников для заглушки
     public IEnumerable<EmployeeBonus> ReadEmployeeBonuses()
     {
-        throw new NotImplementedException();
+        return [];
     }
 
-    // Заглушка создания надбавки работника, пока выбрасывает исключение
+    // Заглушка создания надбавки работника без сохранения данных
     public void CreateEmployeeBonus(EmployeeBonus bonus)
     {
-        throw new NotImplementedException();
     }
 
-    // Заглушка удаления надбавки работника, пока выбрасывает исключение
+    // Заглушка удаления надбавки работника без изменения данных
     public void DeleteEmployeeBonus(EmployeeBonus bonus)
     {
-        throw new NotImplementedException();
     }
 }

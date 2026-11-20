@@ -64,12 +64,8 @@ namespace TimePayroll.Forms
                 return;
             }
             try {
-                if (_positionId.HasValue) {
-                    _positionRepository.UpdatePosition(CreatePosition(_positionId.Value));
-                }
-                else {
-                    _positionRepository.CreatePosition(CreatePosition(0));
-                }
+                if (_positionId.HasValue) _positionRepository.UpdatePosition(CreatePosition(_positionId.Value));
+                else _positionRepository.CreatePosition(CreatePosition(0));
                 Close();
             }
             catch (Exception ex) {
@@ -90,6 +86,7 @@ namespace TimePayroll.Forms
             Position.CreateEntity(
                 id,
                 TextBoxPositionName.Text.Trim(),
-                NumericUpDownHourlyRate.Value);
+                NumericUpDownHourlyRate.Value
+            );
     }
 }

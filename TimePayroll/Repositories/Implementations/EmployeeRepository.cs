@@ -6,10 +6,10 @@ namespace TimePayroll.Repositories.Implementations;
 // Заглушка репозитория работников
 public class EmployeeRepository : IEmployeeRepository
 {
-    // Заглушка получения списка работников, пока выбрасывает исключение
+    // Возвращает пустой список работников для заглушки
     public IEnumerable<Employee> ReadEmployees()
     {
-        throw new NotImplementedException();
+        return [];
     }
 
     // Заглушка получения работника по идентификатору, пока выбрасывает исключение

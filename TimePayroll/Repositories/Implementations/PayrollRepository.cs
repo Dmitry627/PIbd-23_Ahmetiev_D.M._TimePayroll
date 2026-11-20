@@ -6,15 +6,14 @@ namespace TimePayroll.Repositories.Implementations;
 // Заглушка репозитория начислений зарплаты
 public class PayrollRepository : IPayrollRepository
 {
-    // Заглушка получения списка начислений зарплаты, пока выбрасывает исключение
+    // Возвращает пустой список начислений зарплаты для заглушки
     public IEnumerable<Payroll> ReadPayrolls()
     {
-        throw new NotImplementedException();
+        return [];
     }
     
-    // Заглушка создания начисления зарплаты, пока выбрасывает исключение
+    // Заглушка создания начисления зарплаты без сохранения данных
     public void CreatePayroll(Payroll payroll)
     {
-        throw new NotImplementedException();
     }
 }

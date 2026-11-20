@@ -1,6 +1,8 @@
 using Unity;
+using TimePayroll.Entities.Enums;
 using TimePayroll.Repositories;
 using TimePayroll.Repositories.Implementations;
+using TimePayroll.Services;
 
 namespace TimePayroll;
 
@@ -25,6 +27,9 @@ internal static class Program
         container.RegisterType<IEmployeeRepository, EmployeeRepository>();
         container.RegisterType<IEmployeeBonusRepository, EmployeeBonusRepository>();
         container.RegisterType<IPayrollRepository, PayrollRepository>();
+        container.RegisterInstance(new PayrollRates(
+            workCoefficients: new Dictionary<WorkType, decimal>(),
+            bonusPercentages: new Dictionary<BonusType, decimal>()));
         return container;
     }
 }

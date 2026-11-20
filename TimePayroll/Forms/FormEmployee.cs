@@ -25,10 +25,8 @@ namespace TimePayroll.Forms
         // При присваивании номера загружает запись в поля формы и запоминает ее для редактирования
         public long Id
         {
-            set
-            {
-                try
-                {
+            set {
+                try {
                     var employee = _employeeRepository.ReadEmployeeById(value);
                     if (employee is null) throw new InvalidDataException("Работник не найден");
                     textBoxFirstName.Text = employee.FirstName;
@@ -36,8 +34,7 @@ namespace TimePayroll.Forms
                     comboBoxPosition.SelectedValue = employee.PositionId;
                     _employeeId = value;
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     MessageBox.Show(
                         ex.Message,
                         "Ошибка при получении данных",
@@ -67,12 +64,8 @@ namespace TimePayroll.Forms
                 if (string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
                     string.IsNullOrWhiteSpace(textBoxSecondName.Text) ||
                     comboBoxPosition.SelectedValue is null) throw new Exception("Заполните имя, фамилию и должность.");
-                if (_employeeId.HasValue) {
-                    _employeeRepository.UpdateEmployee(CreateEmployee(_employeeId.Value));
-                }
-                else {
-                    _employeeRepository.CreateEmployee(CreateEmployee(0));
-                }
+                if (_employeeId.HasValue) _employeeRepository.UpdateEmployee(CreateEmployee(_employeeId.Value));
+                else _employeeRepository.CreateEmployee(CreateEmployee(0));
                 Close();
             }
             catch (Exception ex) {
@@ -80,7 +73,8 @@ namespace TimePayroll.Forms
                     ex.Message,
                     "Ошибка при сохранении",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                    MessageBoxIcon.Error
+                );
             }
         }
 

@@ -6,16 +6,15 @@ namespace TimePayroll.Repositories.Implementations;
 // Заглушка репозитория записей рабочего времени
 public class WorkEntryRepository : IWorkEntryRepository
 {
-    // Заглушка получения списка записей рабочего времени, пока выбрасывает исключение
+    // Возвращает пустой список записей рабочего времени для заглушки
     public IEnumerable<WorkEntry> ReadWorkEntries()
     {
-        throw new NotImplementedException();
+        return [];
     }
     
-    // Заглушка создания записи рабочего времени, пока выбрасывает исключение
+    // Заглушка создания записи рабочего времени без сохранения данных
     public void CreateWorkEntry(WorkEntry entry)
     {
-        throw new NotImplementedException();
     }
 
     // Заглушка удаления записи рабочего времени, пока выбрасывает исключение

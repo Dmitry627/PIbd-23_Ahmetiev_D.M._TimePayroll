@@ -74,6 +74,7 @@ namespace TimePayroll.Forms
             "Удаление",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question) != DialogResult.Yes) return;
+
             try {
                 var project = _projectRepository.ReadProjectById(findId);
                 if (project is null) throw new InvalidDataException("Проект не найден");
@@ -90,9 +91,6 @@ namespace TimePayroll.Forms
             }
         }
 
-        // Заполняет таблицу проектами из репозитория
-        private void LoadList() => dataGridViewProjects.DataSource = _projectRepository.ReadProjects().ToList();
-
         // Загружает список проектов при открытии формы и показывает ошибки
         private void FormProjects_Load(object sender, EventArgs e)
         {
@@ -108,6 +106,9 @@ namespace TimePayroll.Forms
                 );
             }
         }
+
+        // Заполняет таблицу проектами из репозитория
+        private void LoadList() => dataGridViewProjects.DataSource = _projectRepository.ReadProjects().ToList();
 
         // Получает номер проекта из выбранной строки
         // Проверяет выбор строки и возвращает идентификатор проекта через out

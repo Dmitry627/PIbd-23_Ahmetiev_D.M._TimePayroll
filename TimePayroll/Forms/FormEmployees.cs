@@ -81,7 +81,7 @@ namespace TimePayroll.Forms
         }
 
         // Удаляет выбранного работника после подтверждения
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (!TryGetIdentifierFromSelectedRow(out var findId)) return;
             if (MessageBox.Show(

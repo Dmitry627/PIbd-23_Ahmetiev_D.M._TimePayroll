@@ -34,6 +34,7 @@ namespace TimePayroll.Forms
                     comboBoxProjectType.SelectedItem = (ProjectType)project.Type;
                     comboBoxManager.SelectedValue = project.ManagerId;
                     comboBoxDeveloper.SelectedValue = project.DeveloperId;
+                    _projectId = value;
                 }
                 catch (Exception ex) {
                     MessageBox.Show(
@@ -80,7 +81,7 @@ namespace TimePayroll.Forms
         private void buttonSave_Click(object sender, EventArgs e)
         {
             try {
-                var name = textBoxProjectName.Name.Trim();
+                var name = textBoxProjectName.Text.Trim();
                 if (string.IsNullOrWhiteSpace(name) || 
                 comboBoxProjectType.SelectedItem is not ProjectType projectType ||
                 comboBoxManager.SelectedValue is not long managerId ||

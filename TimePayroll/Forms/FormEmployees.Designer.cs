@@ -23,7 +23,7 @@ namespace TimePayroll.Forms
             dataGridViewEmployees = new DataGridView();
             buttonAdd = new Button();
             buttonEdit = new Button();
-            buttonCancel = new Button();
+            buttonDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).BeginInit();
             SuspendLayout();
             //
@@ -62,22 +62,22 @@ namespace TimePayroll.Forms
             buttonEdit.UseVisualStyleBackColor = true;
             buttonEdit.Click += buttonEdit_Click;
             //
-            // buttonCancel
+            // buttonDelete
             //
-            buttonCancel.Location = new Point(724, 170);
-            buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(124, 73);
-            buttonCancel.TabIndex = 3;
-            buttonCancel.Text = "Отмена";
-            buttonCancel.UseVisualStyleBackColor = true;
-            buttonCancel.Click += buttonCancel_Click;
+            buttonDelete.Location = new Point(724, 170);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(124, 73);
+            buttonDelete.TabIndex = 3;
+            buttonDelete.Text = "Удалить";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
             //
             // FormEmployees
             //
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 360);
-            Controls.Add(buttonCancel);
+            Controls.Add(buttonDelete);
             Controls.Add(buttonEdit);
             Controls.Add(buttonAdd);
             Controls.Add(dataGridViewEmployees);
@@ -98,6 +98,6 @@ namespace TimePayroll.Forms
         // Хранит кнопку изменения записи
         private Button buttonEdit;
         // Хранит кнопку отмены ввода
-        private Button buttonCancel;
+        private Button buttonDelete;
     }
 }

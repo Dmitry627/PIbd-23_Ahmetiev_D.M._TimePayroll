@@ -1,4 +1,4 @@
-﻿namespace TimePayroll
+namespace TimePayroll
 {
     // Разметка и элементы главной формы
     partial class MainForm
@@ -119,15 +119,25 @@
 
         #endregion
 
+        // Хранит главное меню формы
         private MenuStrip menuStrip1;
+        // Хранит пункт меню справочников
         private ToolStripMenuItem справочникToolStripMenuItem;
+        // Хранит пункт меню работников
         private ToolStripMenuItem работникиToolStripMenuItem;
+        // Хранит пункт меню должностей
         private ToolStripMenuItem должностиToolStripMenuItem;
+        // Хранит пункт меню проектов
         private ToolStripMenuItem проектыToolStripMenuItem;
+        // Хранит пункт меню операций
         private ToolStripMenuItem операцииToolStripMenuItem;
+        // Хранит пункт меню учета времени
         private ToolStripMenuItem учетВремениToolStripMenuItem;
+        // Хранит пункт меню надбавок сотрудникам
         private ToolStripMenuItem надбавкиСотрудникамToolStripMenuItem;
+        // Хранит пункт меню начисления зарплаты
         private ToolStripMenuItem начислениеЗарплатыToolStripMenuItem;
+        // Хранит пункт меню отчетов
         private ToolStripMenuItem отчетыToolStripMenuItem;
     }
 }

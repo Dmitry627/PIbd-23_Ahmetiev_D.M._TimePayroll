@@ -1,4 +1,4 @@
-﻿namespace TimePayroll.Forms
+namespace TimePayroll.Forms
 {
     // Разметка и элементы формы одной должности
     partial class FormPosition
@@ -103,11 +103,17 @@
 
         #endregion
 
+        // Хранит поле ввода названия должности
         private TextBox TextBoxPositionName;
+        // Хранит подпись поля должности
         private Label LabelPosition;
+        // Хранит подпись поля почасовой ставки
         private Label LabelHourlyRate;
+        // Хранит поле ввода почасовой ставки
         private NumericUpDown NumericUpDownHourlyRate;
+        // Хранит кнопку сохранения записи
         private Button buttonSave;
+        // Хранит кнопку отмены ввода
         private Button buttonCancel;
     }
 }

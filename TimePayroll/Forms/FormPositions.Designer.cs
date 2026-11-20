@@ -1,4 +1,4 @@
-﻿namespace TimePayroll.Forms
+namespace TimePayroll.Forms
 {
     // Разметка и элементы формы списка должностей
     partial class FormPositions
@@ -93,9 +93,13 @@
 
         #endregion
 
+        // Хранит таблицу должностей
         private DataGridView DataGridViewPositions;
+        // Хранит кнопку добавления записи
         private Button buttonAdd;
+        // Хранит кнопку изменения записи
         private Button buttonEdit;
+        // Хранит кнопку удаления записи
         private Button buttonDelete;
     }
 }

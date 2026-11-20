@@ -1,4 +1,4 @@
-﻿namespace TimePayroll.Forms
+namespace TimePayroll.Forms
 {
     // Разметка и элементы формы списка работников
     partial class FormEmployees
@@ -50,6 +50,7 @@
             buttonAdd.TabIndex = 1;
             buttonAdd.Text = "Добавить";
             buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             //
             // buttonEdit
             //
@@ -59,6 +60,7 @@
             buttonEdit.TabIndex = 2;
             buttonEdit.Text = "Изменить";
             buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
             //
             // buttonCancel
             //
@@ -68,6 +70,7 @@
             buttonCancel.TabIndex = 3;
             buttonCancel.Text = "Отмена";
             buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Click += buttonCancel_Click;
             //
             // FormEmployees
             //
@@ -81,15 +84,20 @@
             Name = "FormEmployees";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Работники";
+            Load += FormEmployees_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
+        // Хранит таблицу работников
         private DataGridView dataGridViewEmployees;
+        // Хранит кнопку добавления записи
         private Button buttonAdd;
+        // Хранит кнопку изменения записи
         private Button buttonEdit;
+        // Хранит кнопку отмены ввода
         private Button buttonCancel;
     }
 }

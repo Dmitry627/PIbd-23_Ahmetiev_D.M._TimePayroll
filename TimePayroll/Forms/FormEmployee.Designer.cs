@@ -1,4 +1,4 @@
-﻿namespace TimePayroll.Forms
+namespace TimePayroll.Forms
 {
     // Разметка и элементы формы одного работника
     partial class FormEmployee
@@ -122,13 +122,21 @@
 
         #endregion
 
+        // Хранит подпись поля имени
         private Label labelFirstName;
+        // Хранит подпись поля фамилии
         private Label labelSecondName;
+        // Хранит подпись поля должности
         private Label labelPosition;
+        // Хранит поле ввода имени
         private TextBox textBoxFirstName;
+        // Хранит поле ввода фамилии
         private TextBox textBoxSecondName;
+        // Хранит список должностей для выбора
         private ComboBox comboBoxPosition;
+        // Хранит кнопку сохранения записи
         private Button buttonSave;
+        // Хранит кнопку отмены ввода
         private Button buttonCancel;
     }
 }

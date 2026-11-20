@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +13,10 @@ namespace TimePayroll.Forms
     // Форма списка должностей с добавлением, изменением и удалением
     public partial class FormPositions : Form
     {
+        // Хранит контейнер Unity для создания форм
         private readonly IUnityContainer _container;
 
+        // Хранит репозиторий должностей
         private readonly IPositionRepository _positionRepository;
 
         // Создает форму и принимает контейнер Unity и репозиторий должностей

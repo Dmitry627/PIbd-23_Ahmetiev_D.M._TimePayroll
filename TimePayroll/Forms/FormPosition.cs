@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +13,10 @@ namespace TimePayroll.Forms
     // Форма добавления и редактирования одной должности
     public partial class FormPosition : Form
     {
+        // Хранит репозиторий должностей
         private readonly IPositionRepository _positionRepository;
 
+        // Хранит идентификатор должности при редактировании
         private int? _positionId;
 
         // При присваивании номера загружает запись в поля формы и запоминает ее для редактирования

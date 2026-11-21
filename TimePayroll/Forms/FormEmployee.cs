@@ -23,6 +23,7 @@ namespace TimePayroll.Forms
         private long? _employeeId;
 
         // При присваивании номера загружает запись в поля формы и запоминает ее для редактирования
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public long Id
         {
             set {

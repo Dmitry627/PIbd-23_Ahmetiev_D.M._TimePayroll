@@ -24,6 +24,7 @@ namespace TimePayroll.Forms
         // Хранит идентификатор проекта при редактировании
         private long? _projectId;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public long Id
         {
             set {

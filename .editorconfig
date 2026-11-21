@@ -1,0 +1,6 @@
+[*.cs]
+# Скобка блоков управления остается на строке с условием или ключевым словом
+csharp_new_line_before_open_brace = accessors, anonymous_methods, anonymous_types, events, indexers, lambdas, local_functions, methods, object_collection_array_initializers, properties, types
+
+# Предпочитаем проверку null через сопоставление с образцом
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion

@@ -1,0 +1,103 @@
+namespace TimePayroll.Forms
+{
+    // Разметка и элементы формы списка работников
+    partial class FormEmployees
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        // Освобождает ресурсы элементов формы при ее закрытии
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        // Создает элементы формы, задает свойства и подключает события
+        private void InitializeComponent()
+        {
+            dataGridViewEmployees = new DataGridView();
+            buttonAdd = new Button();
+            buttonEdit = new Button();
+            buttonDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).BeginInit();
+            SuspendLayout();
+            //
+            // dataGridViewEmployees
+            //
+            dataGridViewEmployees.AllowUserToAddRows = false;
+            dataGridViewEmployees.AllowUserToDeleteRows = false;
+            dataGridViewEmployees.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEmployees.Dock = DockStyle.Left;
+            dataGridViewEmployees.Location = new Point(0, 0);
+            dataGridViewEmployees.MultiSelect = false;
+            dataGridViewEmployees.Name = "dataGridViewEmployees";
+            dataGridViewEmployees.ReadOnly = true;
+            dataGridViewEmployees.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewEmployees.Size = new Size(718, 360);
+            dataGridViewEmployees.TabIndex = 0;
+            //
+            // buttonAdd
+            //
+            buttonAdd.Location = new Point(724, 12);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(124, 73);
+            buttonAdd.TabIndex = 1;
+            buttonAdd.Text = "Добавить";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
+            //
+            // buttonEdit
+            //
+            buttonEdit.Location = new Point(724, 91);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(124, 73);
+            buttonEdit.TabIndex = 2;
+            buttonEdit.Text = "Изменить";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
+            //
+            // buttonDelete
+            //
+            buttonDelete.Location = new Point(724, 170);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(124, 73);
+            buttonDelete.TabIndex = 3;
+            buttonDelete.Text = "Удалить";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            //
+            // FormEmployees
+            //
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(860, 360);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonEdit);
+            Controls.Add(buttonAdd);
+            Controls.Add(dataGridViewEmployees);
+            Name = "FormEmployees";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Работники";
+            Load += FormEmployees_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        // Хранит таблицу работников
+        private DataGridView dataGridViewEmployees;
+        // Хранит кнопку добавления записи
+        private Button buttonAdd;
+        // Хранит кнопку изменения записи
+        private Button buttonEdit;
+        // Хранит кнопку отмены ввода
+        private Button buttonDelete;
+    }
+}
